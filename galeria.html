@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Del Rey - Sitio Oficial No Autorizado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="imagenes/todos/ldrlogo.png">
+</head>
+<body class="bg-black text-white font-sans">
+
+<header class="text-center py-4">
+    <img src="imagenes/index/logo.png" alt="Logo de Lana Del Rey" height="90">
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="historia.html" id="biografiaDropdown" role="button" aria-expanded="false">Biografía</a>
+                    <ul class="dropdown-menu" aria-labelledby="biografiaDropdown">
+                        <li><a class="dropdown-item" href="influencias.html">Inicios e Influencias</a></li>
+                        <li><a class="dropdown-item" href="logros.html">Logros</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="novedades.html" id="biografiaDropdown" role="button" aria-expanded="false">¡Novedades!</a>
+                    <ul class="dropdown-menu" aria-labelledby="novedadesDropdown">
+                        <li><a class="dropdown-item" href="nuevamusica.html">Nueva Música</a></li>
+                        <li><a class="dropdown-item" href="entrevistas.html">Entrevistas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="discografia.html" id="biografiaDropdown" role="button" aria-expanded="false">Discografía</a>
+                    <ul class="dropdown-menu" aria-labelledby="discografiaDropdown">
+                        <li><a class="dropdown-item" href="sencillos.html">Sencillos</a></li>
+                        <li><a class="dropdown-item" href="controversias.html">Controversias</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="juego.html">¡Juega!</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quiensoy.html">¿Quién Soy?</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div id="contenedor">
+    <section>
+        <article>
+        <h2 style="text-align: center;"><strong>Lana Del Rey en Imagenes</strong></h2>
+        
+        <p>Hice una selección de imagenes que creo que pueden resumir la belleza de Lana Del Rey en breves momentos. Take a look:</p>
+
+            <div id="galeria">
+                <ul>
+                  <li>
+                    <img src="imagenes/galeria/galeria1.png" alt="LDR Rubia">
+                    <div class="descripcion">Lana Del Rey en 2011</div>
+                    </li>
+                    <li>
+                        <img src="imagenes/galeria/galeria2.png" alt="LDR Castaña">
+                        <div class="descripcion">Posando para una fotografía de Instagram (2024)</div>
+                    </li>
+                    <li>
+                        <img src="imagenes/galeria/galeria3.png" alt="LDR Dazed Magazine">
+                        <div class="descripcion">LDR para Dazed Magazine (2017)</div>
+                    </li>
+                    <li>
+                        <img src="imagenes/galeria/galeria4.png" alt="Portada Honeymoon">
+                        <div class="descripcion">Portada de su Álbum NFR! (2019)</div>
+                    </li>
+                    <li>
+                        <img src="imagenes/galeria/galeria5.png" alt="Portada Honeymoon">
+                        <div class="descripcion">Portada alternativa para su último disco (2023)</div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+</div>
+
+ <script>
+      // Variables
+      const galeria = document.getElementById('galeria');
+      const lista = galeria.querySelector('ul');
+      const elementos = lista.querySelectorAll('li');
+      const intervalo = 1500; // Cambia el intervalo a 2000 milisegundos (2 segundos)
+
+      let indiceActual = 0;
+
+      // Función para mostrar la siguiente imagen y su descripción
+      function mostrarSiguienteImagen() {
+        elementos[indiceActual].style.display = 'none';
+        indiceActual = (indiceActual + 1) % elementos.length;
+        elementos[indiceActual].style.display = 'block';
+      }
+
+      // Iniciar el carrusel automático
+      setInterval(mostrarSiguienteImagen, intervalo);
+
+      // Ocultar todas las imágenes excepto la primera
+      for (let i = 1; i < elementos.length; i++) {
+        elementos[i].style.display = 'none';
+      }
+    </script> 
+       
+<footer>
+    <p style="text-align: center;">¡Para volver a Inicio haz click <a href="index.html">aquí</a>!</p>
+    <p>&copy; 2024 Informática General. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* Estilos generales */
+
+body {
+    background-color: #000;
+    font-family: sans-serif;
+    position: relative;
+}
+
+#contenedor {
+    background-color: #242424;
+    width: 90%;
+    max-width: 90%;
+    margin: 15px auto 40px auto;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.dropdown-menu {
+    background-color: #242424;
+    color: black;
+}
+
+.dropdown-menu a {
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+footer {
+    background-color: #242424;
+    width: 90%;
+    max-width: 90%;
+    margin: 15px auto 40px auto;
+    padding: 0 1.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Para evitar que las imágenes se desborden del contenedor */
+    max-width: 100%; /* Limita el ancho del contenedor al ancho del artículo */
+    padding: 10px; /* Añade un pequeño espacio interno al contenedor */
+    box-sizing: border-box;
+}
+
+.imagen-contenedor img {
+    max-width: 100%; /* La imagen ocupará el 100% del ancho del contenedor padre */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la relación de aspecto */
+    box-sizing: border-box;
+}
+
+#galeria img {
+    max-width: 90%;
+    height: auto;
+}
+
+#galeria ul li {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Consulta de medios para ajustar el texto */
+@media screen and (max-width: 8px) {
+    #contenedor {
+        padding: 1rem;
+    }
+}
