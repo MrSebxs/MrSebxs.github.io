@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: " . $email . "\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
 
-    // Envía el correo electrónico
     if (mail($destinatario, $asunto, $mensaje, $headers)) {
         echo "El mensaje ha sido enviado correctamente.";
     } else {
